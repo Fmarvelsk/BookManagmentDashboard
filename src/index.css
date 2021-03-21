@@ -105,3 +105,10 @@ span.feed {
 .dk{
   display: none;
 }
+img.mail {
+  width: 25px;
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  color: red;
+ }

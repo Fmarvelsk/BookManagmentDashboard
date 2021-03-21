@@ -1,6 +1,7 @@
 import React from 'react'
 import { book } from '../Data'
 import Icon from '../Image/exclamation.svg'
+import Msg from '../Image/mail.svg'
 
 const Reminder = () => {
     return(
@@ -13,7 +14,9 @@ const Reminder = () => {
                     { book.map( (note, i ) => 
                                 <div className="user-row" key={i}>
                                 {note.msg ? 
-                                <div className="mr-3 new-msg"></div>
+                                <div className="mr-3 new-msg">
+                                    <img className="mail" src={Msg} alt="msg"/>
+                                </div>
                                 :
                                 
                                 <img className="mr-3 mb-2" src={Icon} alt="icon"/>
