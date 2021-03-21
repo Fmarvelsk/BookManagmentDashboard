@@ -11,7 +11,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.item-list.active {
+  margin-left: 12px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  height: 32px;
+  border-right: 2px solid #ffa101;
+}
 
 @media screen and (max-width : 992px) {
 .main {

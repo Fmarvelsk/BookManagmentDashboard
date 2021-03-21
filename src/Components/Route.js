@@ -13,7 +13,6 @@ const Route = () => {
 
     const dashboardRoutes =  [
         {
-          path: "/dashboard",
           icon: <img src={Logo} alt="logo"/>,
           logo : true
         },
@@ -24,18 +23,19 @@ const Route = () => {
         },
         
         {
+          path:'#3',
           icon : <img src={Graph} alt="graph"/>
         },
         
-        {
+        { path:'#4',
           icon : <img src={Appoint} alt="appoint"/>
         },
 
-        {
+        {path:'#5',
           icon: <img src={Enquiries} alt="enquiries"/>,
         },
 
-        {
+        {path:'#6',
           icon: <img src={Msg} alt="msg"/>,
         },
         {

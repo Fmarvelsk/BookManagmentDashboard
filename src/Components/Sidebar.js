@@ -3,6 +3,12 @@ import Logout from '../Image/log-out.svg'
 
 const Sidebar = (props) => {
 
+  const activeRoute = (routeName) => {
+    return window.location.pathname.indexOf(routeName) > -1
+      ? "active item-list"
+      : "item-list";
+  };
+
     return(
         <div className="sidebar">
                 
@@ -14,10 +20,13 @@ const Sidebar = (props) => {
                     className={
                       prop.logo
                         ? "logos"
-                        : /*activeRoute(prop.layout + prop.path)*/ "item-list"
+                        : activeRoute(prop.path)
+                        
                     }
+                    
                   >
-                    {prop.icon}
+                    
+                    <a href={prop.path} >{prop.icon}</a>
                     </li>
                 
                 ) }
