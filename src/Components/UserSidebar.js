@@ -1,5 +1,5 @@
-import react from 'react'
-import {Form, FormControl} from 'react-bootstrap'
+import React, { useState } from 'react'
+import {Form } from 'react-bootstrap'
 import Noti from '../Image/Notifications.svg'
 import Avatar from '../Image/avatar.svg'
 import Search from '../Image/Search.svg'
@@ -23,9 +23,23 @@ const User = () => {
 }
 
 const UserSidebar = (props) => {
+
+const [text, setText] = useState("scheddo.com/jonathan");
+const [sucess, setSucess] = useState(false)
+
+let result;
+const copyCodToClipboard = () => {
+    const el = result;
+    el.select()
+    document.execCommand("copy")
+    setSucess(true)
+    setTimeout( () => {
+        setSucess(false)
+    },1000)
+}    
+
     return(
         <div className={props.toogle ? "show side" : "side"}>
-            {console.log(props)}
             <button className="btn-hide" onClick={props.hideBar}>X</button>
             <div className="user-side">
                 <div className="search">
@@ -40,14 +54,27 @@ const UserSidebar = (props) => {
   </div>
 
   <User/>
+
   <div className="link-info mb-5">
       <span className="search-icon">
-  <Form.Control type="email" className="input-link" placeholder="scheddo.com/jonathan" />
-  <img className="copy" src={Copy} alt="copy"/>
-  </span>
-  <span className="span-btn">Edit Link</span>
-  </div>
+  <Form.Control 
+  type="text" 
+  className="input-link" 
+  value={text}
+  onChange={ (e) => setText(e.target.value)}
+  ref={(input) =>{
+      result = input
+  } } />
 
+  <img className="copy" src={Copy} onClick={copyCodToClipboard} alt="copy"/>
+  <span className={sucess ? 'feed' : 'dk'}> Copied</span>
+  
+  </span>
+  <button 
+  className="span-btn"
+  >Edit Link</button>
+  </div>
+  
   <Upgrade/>
   <Reminder/>
   

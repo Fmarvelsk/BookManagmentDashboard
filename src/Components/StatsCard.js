@@ -14,7 +14,7 @@ export class StatsCard extends Component {
                <p className="bold-stats"> {Info.statsValue}</p>
                {Info.sign ? <img 
                className={Info.sign.includes('+') ? "plus" : "minus" }
-               src={Info.sign.includes('+') ? Plus : Minus} /> : '' }
+               alt="+" src={Info.sign.includes('+') ? Plus : Minus} /> : '' }
                 </div>
                  </div>
            </div>

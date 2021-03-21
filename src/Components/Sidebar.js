@@ -5,6 +5,7 @@ const Sidebar = (props) => {
 
     return(
         <div className="sidebar">
+                
                 <ul className="nav-dash">
 
                     {props.dashboard.map( (prop, i) => 
@@ -21,8 +22,8 @@ const Sidebar = (props) => {
                 
                 ) }
                    <li><img className="logout item-list" src={Logout} alt="logout" /></li> 
-                <span className="active-line"></span>
                 </ul>
+                
         </div>
        )
 }
