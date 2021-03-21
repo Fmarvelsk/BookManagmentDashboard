@@ -100,6 +100,11 @@ width: 38px;
 height: 38px;
 position: relative;
 border-radius: 50px;
+transition: 1s;
+cursor: pointer;
+}
+.notification:hover {
+  width: 40px;
 }
 .search {
   display: flex;
@@ -358,8 +363,17 @@ opacity: 0.6;
 .btn-hide:hover{
   opacity: 0.5;
 }
-
-span.active-line {
+.red-no{
+  color: #F35162
+}
+.logout {
+  position: absolute;
+  bottom: -10px;
+  width: 24%;
+  right: 34px;
+  opacity: 0.3;
+}
+/*span.active-line {
   position: absolute;
   border: 1px solid transparent;
   height: 30px;
@@ -367,4 +381,4 @@ span.active-line {
   background: #FFA101 0% 0% no-repeat padding-box;
   top: 18%;
   right: 0;
-}
+}*/

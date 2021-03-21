@@ -1,5 +1,5 @@
 import React from 'react';
-import Logout from '../Image/settings.svg'
+import Logout from '../Image/log-out.svg'
 
 const Sidebar = (props) => {
 

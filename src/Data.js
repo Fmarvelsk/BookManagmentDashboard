@@ -50,7 +50,8 @@ const StatsNumber = [{
 },
 {
   statsText:"Pending Approval",
-  statsValue:"120"
+  statsValue:"120",
+  red : true
 },
 {statsText:"New Clients",
 statsValue:"89",
