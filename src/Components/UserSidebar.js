@@ -26,8 +26,12 @@ const UserSidebar = (props) => {
 
 const [text, setText] = useState("scheddo.com/jonathan");
 const [sucess, setSucess] = useState(false)
+const [edit, setEdit] = useState(true)
 
 let result;
+const EditLink = () => {
+    setEdit(false)
+}
 const copyCodToClipboard = () => {
     const el = result;
     el.select()
@@ -61,6 +65,7 @@ const copyCodToClipboard = () => {
   type="text" 
   className="input-link" 
   value={text}
+  readOnly={edit}
   onChange={ (e) => setText(e.target.value)}
   ref={(input) =>{
       result = input
@@ -72,7 +77,7 @@ const copyCodToClipboard = () => {
   </span>
   <button 
   className="span-btn"
-  >Edit Link</button>
+  onClick={EditLink}>Edit Link</button>
   </div>
   
   <Upgrade/>
